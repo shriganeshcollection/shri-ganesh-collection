@@ -7,6 +7,7 @@
 <title>Shri Ganesh Collection | Chichli</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -18,6 +19,8 @@ body{
     background:#f7f5f1;
     color:#171717;
 }
+
+/* HEADER */
 
 header{
     background:#050505;
@@ -42,30 +45,34 @@ nav a{
     font-size:14px;
 }
 
+/* HERO */
+
 .hero{
-    min-height:520px;
+    min-height:620px;
     display:flex;
     align-items:center;
-    padding:60px 8%;
+    gap:60px;
+    padding:65px 7%;
     background:#111;
     color:white;
 }
 
 .hero-text{
-    width:50%;
+    width:45%;
 }
 
 .hero h1{
-    font-size:55px;
+    font-size:58px;
     line-height:1.05;
-    margin-bottom:20px;
+    margin-bottom:22px;
+    letter-spacing:-1px;
 }
 
 .hero p{
     font-size:18px;
-    line-height:1.6;
+    line-height:1.7;
     color:#ddd;
-    margin-bottom:30px;
+    margin-bottom:32px;
 }
 
 .btn{
@@ -76,23 +83,33 @@ nav a{
     text-decoration:none;
     font-weight:bold;
     margin-right:10px;
+    transition:.2s;
 }
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* HERO IMAGE */
 
 .hero-image{
-    width:50%;
-    height:420px;
-    background-image:url("https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=1000&q=80");
+    width:55%;
+    height:470px;
+    background-image:url("hero-banner.jpg");
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 }
 
+/* GENERAL SECTION */
+
 .section{
-    padding:70px 7%;
+    padding:75px 7%;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
 .section-title h2{
@@ -104,22 +121,30 @@ nav a{
     color:#666;
 }
 
+/* CATEGORIES */
+
 .categories{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:22px;
 }
 
 .category{
     height:300px;
     position:relative;
     overflow:hidden;
+    border-radius:2px;
 }
 
 .category img{
     width:100%;
     height:100%;
     object-fit:cover;
+    transition:.4s;
+}
+
+.category:hover img{
+    transform:scale(1.04);
 }
 
 .category div{
@@ -127,14 +152,16 @@ nav a{
     bottom:0;
     left:0;
     right:0;
-    padding:25px;
-    background:linear-gradient(transparent,rgba(0,0,0,.8));
+    padding:28px;
+    background:linear-gradient(transparent,rgba(0,0,0,.85));
     color:white;
 }
 
 .category h3{
     font-size:25px;
 }
+
+/* PRODUCTS */
 
 .products{
     display:grid;
@@ -152,6 +179,7 @@ nav a{
     width:100%;
     height:330px;
     object-fit:cover;
+    display:block;
 }
 
 .product-info{
@@ -203,6 +231,8 @@ nav a{
     font-size:14px;
 }
 
+/* FEATURES */
+
 .features{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -213,6 +243,7 @@ nav a{
     background:white;
     padding:35px 25px;
     text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
 }
 
 .feature h3{
@@ -224,11 +255,13 @@ nav a{
     line-height:1.6;
 }
 
+/* CTA */
+
 .cta{
     background:#111;
     color:white;
     text-align:center;
-    padding:70px 20px;
+    padding:75px 20px;
 }
 
 .cta h2{
@@ -241,6 +274,8 @@ nav a{
     margin-bottom:25px;
 }
 
+/* FOOTER */
+
 footer{
     background:#050505;
     color:#aaa;
@@ -249,10 +284,14 @@ footer{
     font-size:14px;
 }
 
+/* TABLET */
+
 @media(max-width:900px){
 
     .hero{
         flex-direction:column;
+        gap:35px;
+        padding:55px 6%;
     }
 
     .hero-text,
@@ -261,12 +300,11 @@ footer{
     }
 
     .hero-image{
-        margin-top:35px;
-        height:350px;
+        height:400px;
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:45px;
     }
 
     .products{
@@ -283,24 +321,48 @@ footer{
     }
 }
 
+/* MOBILE */
+
 @media(max-width:550px){
+
+    .hero{
+        padding:45px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-image{
+        height:300px;
+    }
 
     .products{
         grid-template-columns:1fr;
     }
 
     .section{
-        padding:50px 5%;
+        padding:55px 5%;
     }
 
-    .hero{
-        padding:50px 6%;
+    .btn{
+        margin-bottom:10px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -310,24 +372,34 @@ footer{
     alt="Shri Ganesh Collection">
 
     <nav>
+
         <a href="#home">Home</a>
+
         <a href="#categories">Categories</a>
+
         <a href="#products">Collection</a>
+
         <a href="#contact">Contact</a>
+
     </nav>
 
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero" id="home">
 
     <div class="hero-text">
 
-        <h1>Style That<br>Feels Right.</h1>
+        <h1>
+            Style That<br>
+            Feels Right.
+        </h1>
 
         <p>
-        Discover fashionable Men, Women and Kids wear
-        at Shri Ganesh Collection, Chichli.
+            Discover fashionable Men, Women and Kids wear
+            at Shri Ganesh Collection, Chichli.
         </p>
 
         <a href="#products" class="btn">
@@ -340,10 +412,13 @@ footer{
 
     </div>
 
+
     <div class="hero-image"></div>
 
 </section>
 
+
+<!-- CATEGORIES -->
 
 <section class="section" id="categories">
 
@@ -352,7 +427,7 @@ footer{
         <h2>Shop By Category</h2>
 
         <p>
-        Find the right style for every member of your family.
+            Find the right style for every member of your family.
         </p>
 
     </div>
@@ -360,12 +435,17 @@ footer{
 
     <div class="categories">
 
+
         <div class="category">
 
-            <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80">
+            <img
+            src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80"
+            alt="Men's Fashion">
 
             <div>
+
                 <h3>Men</h3>
+
             </div>
 
         </div>
@@ -373,10 +453,14 @@ footer{
 
         <div class="category">
 
-            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
+            <img
+            src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80"
+            alt="Women's Fashion">
 
             <div>
+
                 <h3>Women</h3>
+
             </div>
 
         </div>
@@ -384,18 +468,25 @@ footer{
 
         <div class="category">
 
-            <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=800&q=80">
+            <img
+            src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=800&q=80"
+            alt="Kids Fashion">
 
             <div>
+
                 <h3>Kids</h3>
+
             </div>
 
         </div>
+
 
     </div>
 
 </section>
 
+
+<!-- PRODUCTS -->
 
 <section class="section" id="products">
 
@@ -404,7 +495,7 @@ footer{
         <h2>Featured Collection</h2>
 
         <p>
-        Browse our latest products before visiting the store.
+            Browse our latest products before visiting the store.
         </p>
 
     </div>
@@ -412,7 +503,8 @@ footer{
 
     <div class="products">
 
-        <!-- PRODUCT 1 -->
+
+        <!-- BLUE CHECK SHIRT -->
 
         <div class="product">
 
@@ -420,64 +512,89 @@ footer{
             src="blue-check-shirt.jpg"
             alt="Blue Check Shirt">
 
+
             <div class="product-info">
 
-                <h3>Blue Check Shirt</h3>
+                <h3>
+                    Blue Check Shirt
+                </h3>
 
                 <p>
-                Men's Casual Check Shirt
+                    Men's Casual Check Shirt
                 </p>
+
 
                 <div class="price">
                     ₹449
                 </div>
 
+
                 <div class="sizes">
-                    <strong>Available Sizes:</strong>
+
+                    <strong>
+                        Available Sizes:
+                    </strong>
+
                     M, L, XL, XXL
+
                 </div>
+
 
                 <a
                 class="product-btn"
                 href="https://wa.me/91XXXXXXXXXX?text=Hi%20Shri%20Ganesh%20Collection,%20I%20am%20interested%20in%20the%20Blue%20Check%20Shirt%20%E2%82%B9449.%20Please%20share%20availability."
                 target="_blank">
+
                     WHATSAPP ENQUIRY
+
                 </a>
+
 
                 <a
                 class="reserve-btn"
                 href="https://wa.me/91XXXXXXXXXX?text=Hi%20Shri%20Ganesh%20Collection,%20I%20want%20to%20reserve%20the%20Blue%20Check%20Shirt%20%E2%82%B9449%20in%20my%20preferred%20size."
                 target="_blank">
+
                     RESERVE & VISIT STORE
+
                 </a>
+
 
             </div>
 
         </div>
+
 
     </div>
 
 </section>
 
 
+<!-- WHY SHOP WITH US -->
+
 <section class="section">
 
     <div class="section-title">
 
-        <h2>Why Shop With Us?</h2>
+        <h2>
+            Why Shop With Us?
+        </h2>
 
     </div>
 
 
     <div class="features">
 
+
         <div class="feature">
 
-            <h3>🚚 Local Home Delivery</h3>
+            <h3>
+                🚚 Local Home Delivery
+            </h3>
 
             <p>
-            Get your selected products delivered
-            to nearby areas of Chichli.
+                Get your selected products delivered
+                to nearby areas of Chichli.
             </p>
 
         </div>
@@ -485,11 +602,13 @@ footer{
 
         <div class="feature">
 
-            <h3>🏪 Reserve & Visit</h3>
+            <h3>
+                🏪 Reserve & Visit
+            </h3>
 
             <p>
-            Select a product online and
-            visit our store to check it personally.
+                Select a product online and
+                visit our store to check it personally.
             </p>
 
         </div>
@@ -497,47 +616,66 @@ footer{
 
         <div class="feature">
 
-            <h3>💬 Easy WhatsApp Enquiry</h3>
+            <h3>
+                💬 Easy WhatsApp Enquiry
+            </h3>
 
             <p>
-            Ask about size, colour, price and
-            availability directly on WhatsApp.
+                Ask about size, colour, price and
+                availability directly on WhatsApp.
             </p>
 
         </div>
+
 
     </div>
 
 </section>
 
 
+<!-- CONTACT -->
+
 <section class="cta" id="contact">
 
-    <h2>Visit Shri Ganesh Collection</h2>
+    <h2>
+        Visit Shri Ganesh Collection
+    </h2>
 
     <p>
-    Men • Women • Kids Wear
-    <br>
-    Chichli, Madhya Pradesh
+
+        Men • Women • Kids Wear
+
+        <br>
+
+        Chichli, Madhya Pradesh
+
     </p>
+
 
     <a
     href="https://wa.me/91XXXXXXXXXX"
     target="_blank"
     class="btn">
+
         CHAT ON WHATSAPP
+
     </a>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
     © 2026 Shri Ganesh Collection
+
     <br><br>
+
     Chichli, Madhya Pradesh
 
 </footer>
+
 
 </body>
 </html>
