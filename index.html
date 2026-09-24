@@ -14,94 +14,80 @@
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f8f7f4;
+    font-family:Arial, sans-serif;
+    background:#f7f5f1;
     color:#171717;
 }
 
 header{
-    background:#0b0b0b;
-    padding:12px 6%;
+    background:#050505;
+    padding:18px 6%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    min-height:82px;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .logo{
-    width:270px;
-    height:65px;
-    object-fit:contain;
-}
-
-nav{
-    display:flex;
-    gap:28px;
+    height:55px;
+    width:auto;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    margin-left:25px;
     font-size:14px;
 }
 
 .hero{
-    min-height:500px;
-    background:
-    linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
-    url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85");
-    background-size:cover;
-    background-position:center;
+    min-height:520px;
     display:flex;
     align-items:center;
-    justify-content:center;
-    text-align:center;
+    padding:60px 8%;
+    background:#111;
     color:white;
 }
 
-.hero-content{
-    max-width:750px;
-}
-
-.small-title{
-    letter-spacing:5px;
-    font-size:12px;
-    margin-bottom:18px;
+.hero-text{
+    width:50%;
 }
 
 .hero h1{
-    font-size:54px;
+    font-size:55px;
     line-height:1.05;
     margin-bottom:20px;
 }
 
 .hero p{
-    font-size:17px;
+    font-size:18px;
+    line-height:1.6;
+    color:#ddd;
     margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:15px 28px;
-    margin:5px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:13px;
-    border:1px solid white;
-}
-
-.btn-light{
+    padding:15px 25px;
     background:white;
     color:#111;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:10px;
 }
 
-.btn-dark{
-    background:#111;
-    color:white;
+.hero-image{
+    width:50%;
+    height:420px;
+    background-image:url("https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=1000&q=80");
+    background-size:cover;
+    background-position:center;
 }
 
-section{
-    padding:75px 7%;
+.section{
+    padding:70px 7%;
 }
 
 .section-title{
@@ -109,90 +95,114 @@ section{
     margin-bottom:40px;
 }
 
-.section-title span{
-    display:block;
-    font-size:11px;
-    letter-spacing:4px;
-    color:#9a7650;
+.section-title h2{
+    font-size:35px;
     margin-bottom:10px;
 }
 
-.section-title h2{
-    font-size:32px;
+.section-title p{
+    color:#666;
 }
 
 .categories{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
-    max-width:1000px;
-    margin:auto;
 }
 
 .category{
-    height:360px;
+    height:300px;
     position:relative;
     overflow:hidden;
-    background:#ddd;
 }
 
 .category img{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.4s;
 }
 
-.category:hover img{
-    transform:scale(1.05);
-}
-
-.category-info{
+.category div{
     position:absolute;
     bottom:0;
     left:0;
     right:0;
     padding:25px;
-    color:white;
     background:linear-gradient(transparent,rgba(0,0,0,.8));
+    color:white;
 }
 
-.category-info h3{
+.category h3{
     font-size:25px;
-    margin-bottom:5px;
 }
 
-.category-info p{
-    font-size:13px;
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product{
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.product img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.product-info p{
+    color:#666;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.product-btn{
+    display:block;
+    text-align:center;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    font-size:14px;
 }
 
 .features{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    max-width:1000px;
-    margin:auto;
+    gap:25px;
 }
 
 .feature{
     background:white;
     padding:35px 25px;
     text-align:center;
-    border:1px solid #e4e0da;
-}
-
-.feature-icon{
-    font-size:30px;
-    margin-bottom:15px;
 }
 
 .feature h3{
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .feature p{
     color:#666;
-    font-size:14px;
     line-height:1.6;
 }
 
@@ -204,7 +214,7 @@ section{
 }
 
 .cta h2{
-    font-size:34px;
+    font-size:35px;
     margin-bottom:15px;
 }
 
@@ -214,45 +224,35 @@ section{
 }
 
 footer{
-    background:#080808;
+    background:#050505;
     color:#aaa;
     text-align:center;
-    padding:30px 20px;
-    font-size:13px;
+    padding:30px;
+    font-size:14px;
 }
 
-@media(max-width:768px){
-
-    header{
-        flex-direction:column;
-        gap:8px;
-        padding:10px;
-    }
-
-    .logo{
-        width:240px;
-        height:58px;
-    }
-
-    nav{
-        gap:15px;
-    }
-
-    nav a{
-        font-size:12px;
-    }
+@media(max-width:900px){
 
     .hero{
-        min-height:470px;
+        flex-direction:column;
+    }
+
+    .hero-text,
+    .hero-image{
+        width:100%;
+    }
+
+    .hero-image{
+        margin-top:35px;
+        height:350px;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:42px;
     }
 
-    .hero p{
-        font-size:15px;
-        padding:0 15px;
+    .products{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .categories,
@@ -260,12 +260,23 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .category{
-        height:330px;
+    nav{
+        display:none;
+    }
+}
+
+@media(max-width:550px){
+
+    .products{
+        grid-template-columns:1fr;
     }
 
-    section{
-        padding:55px 5%;
+    .section{
+        padding:50px 5%;
+    }
+
+    .hero{
+        padding:50px 6%;
     }
 }
 </style>
@@ -275,68 +286,68 @@ footer{
 
 <header>
 
-    <a href="index.html">
-        <img class="logo"
-        src="ChatGPT%20Image%20Sep%2024%2C%202026%2C%2005_13_59%20PM.png"
-        alt="Shri Ganesh Collection">
-    </a>
+    <img
+    class="logo"
+    src="ChatGPT%20Image%20Sep%2024%2C%202026%2C%2005_13_59%20PM.png"
+    alt="Shri Ganesh Collection">
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="#collections">Collections</a>
-        <a href="#services">Services</a>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Collection</a>
         <a href="#contact">Contact</a>
     </nav>
 
 </header>
 
 
-<section class="hero">
+<section class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="hero-text">
 
-        <div class="small-title">
-            MEN • WOMEN • KIDS
-        </div>
-
-        <h1>
-            Style That<br>
-            Feels Like You
-        </h1>
+        <h1>Style That<br>Feels Right.</h1>
 
         <p>
-            Discover the latest fashion collection from the comfort of your home.
+        Discover fashionable Men, Women and Kids wear
+        at Shri Ganesh Collection, Chichli.
         </p>
 
-        <a href="#collections" class="btn btn-light">
-            EXPLORE COLLECTION
+        <a href="#products" class="btn">
+            SHOP COLLECTION
         </a>
 
-        <a href="#contact" class="btn btn-dark">
-            VISIT STORE
+        <a href="#contact" class="btn">
+            CONTACT US
         </a>
 
     </div>
+
+    <div class="hero-image"></div>
 
 </section>
 
 
-<section id="collections">
+<section class="section" id="categories">
 
     <div class="section-title">
-        <span>EXPLORE</span>
+
         <h2>Shop By Category</h2>
+
+        <p>
+        Find the right style for every member of your family.
+        </p>
+
     </div>
+
 
     <div class="categories">
 
         <div class="category">
 
-            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=85">
+            <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80">
 
-            <div class="category-info">
+            <div>
                 <h3>Men</h3>
-                <p>Shirts • T-Shirts • Jeans • More</p>
             </div>
 
         </div>
@@ -344,11 +355,10 @@ footer{
 
         <div class="category">
 
-            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
 
-            <div class="category-info">
+            <div>
                 <h3>Women</h3>
-                <p>Kurtis • Dresses • Sarees • More</p>
             </div>
 
         </div>
@@ -356,11 +366,10 @@ footer{
 
         <div class="category">
 
-            <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85">
+            <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=800&q=80">
 
-            <div class="category-info">
+            <div>
                 <h3>Kids</h3>
-                <p>Trendy Kids Wear</p>
             </div>
 
         </div>
@@ -370,39 +379,98 @@ footer{
 </section>
 
 
-<section id="services">
+<section class="section" id="products">
 
     <div class="section-title">
-        <span>WHY US</span>
-        <h2>Shop With Confidence</h2>
+
+        <h2>Featured Collection</h2>
+
+        <p>
+        Browse our latest products before visiting the store.
+        </p>
+
     </div>
+
+
+    <div class="products">
+
+        <div class="product">
+
+            <img src="blue-check-shirt.jpg"
+            alt="Blue Check Shirt">
+
+            <div class="product-info">
+
+                <h3>Blue Check Shirt</h3>
+
+                <p>
+                Men's Casual Check Shirt
+                </p>
+
+                <div class="price">
+                    Price on Enquiry
+                </div>
+
+                <a
+                class="product-btn"
+                href="https://wa.me/91XXXXXXXXXX?text=Hi%20Shri%20Ganesh%20Collection,%20I%20am%20interested%20in%20the%20Blue%20Check%20Shirt."
+                target="_blank">
+                    WHATSAPP ENQUIRY
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>Why Shop With Us?</h2>
+
+    </div>
+
 
     <div class="features">
 
         <div class="feature">
-            <div class="feature-icon">🛵</div>
-            <h3>Local Delivery</h3>
+
+            <h3>🚚 Local Home Delivery</h3>
+
             <p>
-                Convenient home delivery available in nearby areas.
+            Get your selected products delivered
+            to nearby areas of Chichli.
             </p>
+
         </div>
 
 
         <div class="feature">
-            <div class="feature-icon">🏪</div>
-            <h3>Reserve & Visit</h3>
+
+            <h3>🏪 Reserve & Visit</h3>
+
             <p>
-                Find your favourite product online and visit our store.
+            Select a product online and
+            visit our store to check it personally.
             </p>
+
         </div>
 
 
         <div class="feature">
-            <div class="feature-icon">💬</div>
-            <h3>WhatsApp Support</h3>
+
+            <h3>💬 Easy WhatsApp Enquiry</h3>
+
             <p>
-                Quickly enquire about products, sizes and availability.
+            Ask about size, colour, price and
+            availability directly on WhatsApp.
             </p>
+
         </div>
 
     </div>
@@ -410,32 +478,31 @@ footer{
 </section>
 
 
-<section class="cta">
+<section class="cta" id="contact">
 
-    <h2>Looking For Something Special?</h2>
+    <h2>Visit Shri Ganesh Collection</h2>
 
     <p>
-        Explore our collection or visit Shri Ganesh Collection in Chichli.
+    Men • Women • Kids Wear
+    <br>
+    Chichli, Madhya Pradesh
     </p>
 
-    <a href="#contact" class="btn btn-light">
-        CONTACT US
+    <a
+    href="https://wa.me/91XXXXXXXXXX"
+    target="_blank"
+    class="btn">
+        CHAT ON WHATSAPP
     </a>
 
 </section>
 
 
-<footer id="contact">
+<footer>
 
-    <h3>SHRI GANESH COLLECTION</h3>
-
-    <p>Men • Women • Kids Wear</p>
-
-    <p>Chichli, Madhya Pradesh</p>
-
-    <br>
-
-    <p>© 2026 Shri Ganesh Collection. All Rights Reserved.</p>
+    © 2026 Shri Ganesh Collection
+    <br><br>
+    Chichli, Madhya Pradesh
 
 </footer>
 
