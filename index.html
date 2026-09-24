@@ -1,252 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shri Ganesh Collection</title>
+<title>Shri Ganesh Collection | Chichli</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #faf9f6;
-            color: #222;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header {
-            background: #111;
-            color: white;
-            padding: 18px 20px;
-            text-align: center;
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f6f2;
+    color:#171717;
+}
 
-        header h1 {
-            font-size: 24px;
-            letter-spacing: 1px;
-        }
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-        header p {
-            margin-top: 5px;
-            font-size: 13px;
-            color: #ccc;
-        }
+/* HEADER */
 
-        nav {
-            background: white;
-            padding: 14px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
+header{
+    background:#111;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
 
-        nav a {
-            color: #222;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-        }
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
 
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background: #eee9df;
-        }
+.logo span{
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    color:#cfcfcf;
+    letter-spacing:2px;
+    margin-top:3px;
+}
 
-        .hero h2 {
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
+nav{
+    display:flex;
+    gap:25px;
+    font-size:14px;
+}
 
-        .hero p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 25px;
-        }
+nav a:hover{
+    color:#d4af72;
+}
 
-        .button {
-            display: inline-block;
-            background: #111;
-            color: white;
-            padding: 13px 24px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-        }
+/* HERO */
 
-        .section {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.hero{
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:
+    linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.48)),
+    url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
 
-        .section h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+.hero-content{
+    max-width:750px;
+}
 
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
+.hero-small{
+    font-size:13px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
 
-        .category {
-            background: white;
-            padding: 35px 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+.hero h1{
+    font-size:58px;
+    line-height:1.05;
+    margin-bottom:20px;
+}
 
-        .category h3 {
-            margin-bottom: 8px;
-        }
+.hero p{
+    font-size:18px;
+    color:#eee;
+    margin-bottom:30px;
+}
 
-        .category p {
-            font-size: 13px;
-            color: #777;
-        }
+.btn{
+    display:inline-block;
+    background:white;
+    color:#111;
+    padding:14px 28px;
+    margin:5px;
+    font-size:14px;
+    font-weight:bold;
+    border-radius:2px;
+}
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 30px;
-        }
+.btn-dark{
+    background:#111;
+    color:white;
+}
 
-        .feature {
-            background: white;
-            padding: 25px 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+.btn:hover{
+    opacity:.85;
+}
 
-        .feature h3 {
-            margin-bottom: 8px;
-        }
+/* SECTION */
 
-        .feature p {
-            font-size: 13px;
-            color: #666;
-        }
+.section{
+    max-width:1150px;
+    margin:auto;
+    padding:70px 20px;
+}
 
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
 
-        footer p {
-            font-size: 13px;
-            color: #ccc;
-        }
+.section-title small{
+    color:#9b7847;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:11px;
+}
 
-        @media (max-width: 600px) {
-            .categories,
-            .features {
-                grid-template-columns: 1fr;
-            }
+.section-title h2{
+    font-size:34px;
+    margin-top:8px;
+}
 
-            .hero h2 {
-                font-size: 27px;
-            }
+/* CATEGORY */
 
-            nav a {
-                margin: 0 5px;
-                font-size: 12px;
-            }
-        }
-    </style>
+.categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.category{
+    min-height:270px;
+    display:flex;
+    align-items:end;
+    padding:25px;
+    color:white;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.category:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,rgba(0,0,0,.75));
+}
+
+.category-content{
+    position:relative;
+    z-index:2;
+}
+
+.category h3{
+    font-size:27px;
+    margin-bottom:7px;
+}
+
+.category p{
+    font-size:13px;
+    color:#eee;
+}
+
+/* CATEGORY IMAGES */
+
+.men{
+    background-image:url("https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=80");
+}
+
+.women{
+    background-image:url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80");
+}
+
+.kids{
+    background-image:url("https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=80");
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:30px 25px;
+    text-align:center;
+    border:1px solid #e4e0d8;
+}
+
+.feature-icon{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.feature h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.feature p{
+    color:#666;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* CTA */
+
+.cta{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.cta h2{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#080808;
+    color:white;
+    padding:40px 20px;
+    text-align:center;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#aaa;
+    font-size:13px;
+    margin:6px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        gap:14px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:500px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .category{
+        min-height:230px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:50px 18px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>SHRI GANESH COLLECTION</h1>
-        <p>Men • Women • Kids Wear</p>
-    </header>
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        SHRI GANESH COLLECTION
+        <span>CHICHLI • MADHYA PRADESH</span>
+    </div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">Kids</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#categories">Collections</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <section class="hero">
-        <h2>Discover Your Style</h2>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Men • Women • Kids
+        </div>
+
+        <h1>
+            Style That<br>
+            Feels Like You
+        </h1>
 
         <p>
-            Explore our latest collection from the comfort of your home.
+            Discover our latest fashion collection from
+            the comfort of your home.
         </p>
 
-        <a href="#" class="button">
-            Explore Collection
+        <a href="#categories" class="btn">
+            EXPLORE COLLECTION
         </a>
-    </section>
 
-    <section class="section">
+        <a href="#contact" class="btn btn-dark">
+            VISIT STORE
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
+
+    <div class="section-title">
+
+        <small>Explore</small>
 
         <h2>Shop By Category</h2>
 
-        <div class="categories">
+    </div>
 
-            <div class="category">
+
+    <div class="categories">
+
+        <a href="#" class="category men">
+
+            <div class="category-content">
+
                 <h3>Men</h3>
-                <p>Shirts, T-Shirts, Jeans & More</p>
+
+                <p>
+                    Shirts • T-Shirts • Jeans • More
+                </p>
+
             </div>
 
-            <div class="category">
+        </a>
+
+
+        <a href="#" class="category women">
+
+            <div class="category-content">
+
                 <h3>Women</h3>
-                <p>Kurtis, Dresses, Sarees & More</p>
+
+                <p>
+                    Kurtis • Dresses • Sarees • More
+                </p>
+
             </div>
 
-            <div class="category">
+        </a>
+
+
+        <a href="#" class="category kids">
+
+            <div class="category-content">
+
                 <h3>Kids</h3>
-                <p>Trendy Kids Wear</p>
+
+                <p>
+                    Trendy Kids Wear
+                </p>
+
             </div>
 
-        </div>
+        </a>
 
-    </section>
+    </div>
 
-    <section class="section">
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+    <div class="section-title">
+
+        <small>Shopping Made Easy</small>
 
         <h2>Why Shop With Us?</h2>
 
-        <div class="features">
+    </div>
 
-            <div class="feature">
-                <h3>🛵 Local Delivery</h3>
-                <p>Convenient home delivery in nearby areas.</p>
-            </div>
 
-            <div class="feature">
-                <h3>🏪 Reserve & Visit</h3>
-                <p>Reserve your favourite product before visiting.</p>
-            </div>
+    <div class="features">
 
-            <div class="feature">
-                <h3>💬 WhatsApp Support</h3>
-                <p>Quick product enquiry through WhatsApp.</p>
-            </div>
+
+        <div class="feature">
+
+            <div class="feature-icon">🛵</div>
+
+            <h3>Local Home Delivery</h3>
+
+            <p>
+                Browse from home and get your
+                selected products delivered locally.
+            </p>
 
         </div>
 
-    </section>
 
-    <footer>
-        <p>© 2026 Shri Ganesh Collection • Chichli</p>
-    </footer>
+        <div class="feature">
+
+            <div class="feature-icon">🏪</div>
+
+            <h3>Reserve & Visit</h3>
+
+            <p>
+                Like something? Reserve it before
+                visiting our physical store.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">💬</div>
+
+            <h3>WhatsApp Enquiry</h3>
+
+            <p>
+                Ask about product availability,
+                sizes and colours directly.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Found Something You Like?</h2>
+
+    <p>
+        Contact us on WhatsApp and check availability.
+    </p>
+
+    <a href="#" class="btn">
+        CHAT ON WHATSAPP
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <h3>SHRI GANESH COLLECTION</h3>
+
+    <p>Men • Women • Kids Wear</p>
+
+    <p>📍 Chichli, Madhya Pradesh</p>
+
+    <p>🛵 Local Home Delivery Available</p>
+
+    <p>🏪 Visit Our Store</p>
+
+    <br>
+
+    <p>
+        © 2026 Shri Ganesh Collection
+    </p>
+
+</footer>
 
 </body>
 </html>
